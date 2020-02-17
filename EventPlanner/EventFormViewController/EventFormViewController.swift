@@ -28,7 +28,20 @@ class EventFormViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PickEventCategory" {
             let controller = segue.destination as! EventCategoryPickerViewController
+            controller.selectedCategoryName = categoryLabel
+            controller.selectedCategoryImage = categoryImage
         }
+    }
+    
+    
+    @IBAction func eventCategoryPickerDidPickCategory(_ segue: UIStoryboardSegue) {
+        let controller = segue.source as! EventCategoryPickerViewController
+        
+        categoryLabel = controller.selectedCategoryName
+        eventCategoryLabel.text = categoryLabel
+        
+        categoryImage = controller.selectedCategoryImage!
+        eventCategoryImage.image = categoryImage
     }
 
 

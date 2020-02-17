@@ -242,6 +242,7 @@
                                             <outlet property="categoryDescriptionLabel" destination="xWh-Ur-PAY" id="ZDy-EV-OzJ"/>
                                             <outlet property="categoryImageView" destination="48v-px-ruo" id="LEw-jI-CeB"/>
                                             <outlet property="categoryNameLabel" destination="d3h-NG-abW" id="cfo-qg-lJR"/>
+                                            <segue destination="gTX-yj-vx2" kind="unwind" identifier="PickedCategory" unwindAction="eventCategoryPickerDidPickCategory:" id="8iN-AT-b98"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -266,6 +267,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umn-xQ-2Ma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gTX-yj-vx2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2040.8" y="-45.42728635682159"/>
         </scene>
