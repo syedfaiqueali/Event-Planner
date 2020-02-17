@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		2D67B41023F9766700BB6225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B40F23F9766700BB6225 /* AppDelegate.swift */; };
 		2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B41123F9766700BB6225 /* SceneDelegate.swift */; };
-		2D67B41423F9766700BB6225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B41323F9766700BB6225 /* ViewController.swift */; };
 		2D67B41723F9766700BB6225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41523F9766700BB6225 /* Main.storyboard */; };
 		2D67B41923F9766900BB6225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41823F9766900BB6225 /* Assets.xcassets */; };
 		2D67B41C23F9766900BB6225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41A23F9766900BB6225 /* LaunchScreen.storyboard */; };
+		2D67B42523F976B900BB6225 /* EventFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B42423F976B900BB6225 /* EventFormViewController.swift */; };
+		2DB23EA823FAFA8B0002C54E /* EventCategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB23EA723FAFA8B0002C54E /* EventCategoryPickerViewController.swift */; };
+		2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB23EA923FAFBFB0002C54E /* CategoryViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D67B40C23F9766700BB6225 /* EventPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D67B40F23F9766700BB6225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D67B41123F9766700BB6225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2D67B41323F9766700BB6225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D67B41623F9766700BB6225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D67B41823F9766900BB6225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D67B41B23F9766900BB6225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D67B41D23F9766900BB6225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D67B42423F976B900BB6225 /* EventFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFormViewController.swift; sourceTree = "<group>"; };
+		2DB23EA723FAFA8B0002C54E /* EventCategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoryPickerViewController.swift; sourceTree = "<group>"; };
+		2DB23EA923FAFBFB0002C54E /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		2D67B40E23F9766700BB6225 /* EventPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				2DB23EA623FAFA590002C54E /* EventCategoryPickerViewController */,
+				2D67B42323F9769600BB6225 /* EventFormViewController */,
 				2D67B40F23F9766700BB6225 /* AppDelegate.swift */,
 				2D67B41123F9766700BB6225 /* SceneDelegate.swift */,
-				2D67B41323F9766700BB6225 /* ViewController.swift */,
 				2D67B41523F9766700BB6225 /* Main.storyboard */,
 				2D67B41823F9766900BB6225 /* Assets.xcassets */,
 				2D67B41A23F9766900BB6225 /* LaunchScreen.storyboard */,
 				2D67B41D23F9766900BB6225 /* Info.plist */,
 			);
 			path = EventPlanner;
+			sourceTree = "<group>";
+		};
+		2D67B42323F9769600BB6225 /* EventFormViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D67B42423F976B900BB6225 /* EventFormViewController.swift */,
+			);
+			path = EventFormViewController;
+			sourceTree = "<group>";
+		};
+		2DB23EA623FAFA590002C54E /* EventCategoryPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DB23EA723FAFA8B0002C54E /* EventCategoryPickerViewController.swift */,
+				2DB23EA923FAFBFB0002C54E /* CategoryViewCell.swift */,
+			);
+			path = EventCategoryPickerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D67B41423F9766700BB6225 /* ViewController.swift in Sources */,
+				2D67B42523F976B900BB6225 /* EventFormViewController.swift in Sources */,
 				2D67B41023F9766700BB6225 /* AppDelegate.swift in Sources */,
 				2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */,
+				2DB23EA823FAFA8B0002C54E /* EventCategoryPickerViewController.swift in Sources */,
+				2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
