@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D1E80362401557F0036FAEC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E80352401557F0036FAEC /* MapViewController.swift */; };
+		2D1E80382401AB570036FAEC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E80372401AB570036FAEC /* Date+Extension.swift */; };
 		2D67B41023F9766700BB6225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B40F23F9766700BB6225 /* AppDelegate.swift */; };
 		2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B41123F9766700BB6225 /* SceneDelegate.swift */; };
 		2D67B41723F9766700BB6225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41523F9766700BB6225 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		2D1E80352401557F0036FAEC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2D1E80372401AB570036FAEC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		2D67B40C23F9766700BB6225 /* EventPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D67B40F23F9766700BB6225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D67B41123F9766700BB6225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 				2D1E80352401557F0036FAEC /* MapViewController.swift */,
 			);
 			path = VenueMapViewController;
+			sourceTree = "<group>";
+		};
+		2D1E80392401ADF50036FAEC /* DateTimePicker extension */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E80372401AB570036FAEC /* Date+Extension.swift */,
+			);
+			path = "DateTimePicker extension";
 			sourceTree = "<group>";
 		};
 		2D67B40323F9766700BB6225 = {
@@ -91,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				2D67B42423F976B900BB6225 /* EventFormViewController.swift */,
+				2D1E80392401ADF50036FAEC /* DateTimePicker extension */,
 			);
 			path = EventFormViewController;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 				2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */,
 				2DB23EAD23FBC44B0002C54E /* EventVenuePickerViewController.swift in Sources */,
 				2D1E80362401557F0036FAEC /* MapViewController.swift in Sources */,
+				2D1E80382401AB570036FAEC /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
