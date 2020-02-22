@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1E80362401557F0036FAEC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E80352401557F0036FAEC /* MapViewController.swift */; };
 		2D67B41023F9766700BB6225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B40F23F9766700BB6225 /* AppDelegate.swift */; };
 		2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B41123F9766700BB6225 /* SceneDelegate.swift */; };
 		2D67B41723F9766700BB6225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41523F9766700BB6225 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D1E80352401557F0036FAEC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2D67B40C23F9766700BB6225 /* EventPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D67B40F23F9766700BB6225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D67B41123F9766700BB6225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1E80342401552A0036FAEC /* VenueMapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E80352401557F0036FAEC /* MapViewController.swift */,
+			);
+			path = VenueMapViewController;
+			sourceTree = "<group>";
+		};
 		2D67B40323F9766700BB6225 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 			children = (
 				2DB23EAC23FBC44B0002C54E /* EventVenuePickerViewController.swift */,
 				2DB23EAE23FBC4910002C54E /* VenueViewCell.swift */,
+				2D1E80342401552A0036FAEC /* VenueMapViewController */,
 			);
 			path = EventVenuePickerViewController;
 			sourceTree = "<group>";
@@ -181,6 +192,7 @@
 				2DB23EA823FAFA8B0002C54E /* EventCategoryPickerViewController.swift in Sources */,
 				2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */,
 				2DB23EAD23FBC44B0002C54E /* EventVenuePickerViewController.swift in Sources */,
+				2D1E80362401557F0036FAEC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

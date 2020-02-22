@@ -1,4 +1,9 @@
 import UIKit
+import CoreLocation
+
+protocol EventVenueDetailsPassing {
+    func passVenueDetails(name: String, address: String, price: String, image: UIImage)
+}
 
 class EventVenuePickerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -12,12 +17,24 @@ class EventVenuePickerViewController: UIViewController, UITableViewDataSource, U
     
     let venuePrices = ["1000/per", "2500/per", "6000/per", "1500/per", "7000/per", "5000/per","5000/per"]
     
+    let venueCoordinates = [
+                            CLLocationCoordinate2D(latitude: 37.333411, longitude: -122.008679),
+                            CLLocationCoordinate2D(latitude: 24.949693, longitude: 67.054137),
+                            CLLocationCoordinate2D(latitude: 37.333411, longitude: -122.008679),
+                            CLLocationCoordinate2D(latitude: 24.949693, longitude: 67.054137),
+                            CLLocationCoordinate2D(latitude: 37.333411, longitude: -122.008679),
+                            CLLocationCoordinate2D(latitude: 24.949693, longitude: 67.054137),
+                            CLLocationCoordinate2D(latitude: 37.333411, longitude: -122.008679) ]
+    
+    
     var selectedVenueName = ""
     var selectedVenueAddress = ""
     var selectedVenuePrice = ""
     var selectedVenueImage :UIImage?
     var selectedIndexPath = IndexPath()
+    var selectedVenueCell: Int = 0
     
+    var delegate: EventVenueDetailsPassing?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,24 +67,31 @@ class EventVenuePickerViewController: UIViewController, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            
         selectedIndexPath = indexPath
+        selectedVenueCell = indexPath.row
        
     }
         
     
     //MARK:- Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PickedVenue" {
-            let cell = sender as! UITableViewCell
-            if let indexPath = tableView.indexPath(for: cell) {
-                selectedVenueName = venueNames[indexPath.row]
-                selectedVenueAddress = venueAddress[indexPath.row]
-                selectedVenuePrice = venuePrices[indexPath.row]
-                selectedVenueImage = venueImages[indexPath.row]
-            }
+  
+        if segue.identifier == "ShowMaps" {
             
+            let controller = segue.destination as! MapViewController
+        
+            controller.venueTitle = venueNames[selectedVenueCell]
+            controller.venueLocationCoordinate = venueCoordinates[selectedVenueCell]
         }
+        
     }
     
-    
+    //MARK:- Action
+    @IBAction func done(){
+        
+        delegate?.passVenueDetails(name: venueNames[selectedVenueCell], address: venueAddress[selectedVenueCell], price: venuePrices[selectedVenueCell], image: venueImages[selectedVenueCell])
+        
+        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
 
 }

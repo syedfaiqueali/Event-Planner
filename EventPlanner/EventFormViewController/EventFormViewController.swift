@@ -1,6 +1,6 @@
 import UIKit
 
-class EventFormViewController: UITableViewController {
+class EventFormViewController: UITableViewController, EventVenueDetailsPassing {
     
     @IBOutlet weak var eventNameTextField: UITextField!
     @IBOutlet weak var eventDescriptionTextView: UITextView!
@@ -35,6 +35,7 @@ class EventFormViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "PickEventCategory" {
             let controller = segue.destination as! EventCategoryPickerViewController
             controller.selectedCategoryName = categoryLabel
@@ -48,6 +49,7 @@ class EventFormViewController: UITableViewController {
             controller.selectedVenueAddress = venueAddressLabel
             controller.selectedVenuePrice = venuePriceLabel
             controller.selectedVenueImage = venueImage
+            controller.delegate = self
         }
     }
     
@@ -63,21 +65,12 @@ class EventFormViewController: UITableViewController {
         
     }
     
-    @IBAction func eventVenuePickerDidPickVenue(_ segue: UIStoryboardSegue) {
-        let controller = segue.source as! EventVenuePickerViewController
-        
-        venueNameLabel = controller.selectedVenueName
-        eventVenueNameLabel.text = venueNameLabel
-        
-        venueAddressLabel = controller.selectedVenueAddress
-        eventVenueAddressLabel.text = venueAddressLabel
-        
-        venuePriceLabel = controller.selectedVenuePrice
-        eventVenuePriceLabel.text = venuePriceLabel
-        
-        venueImage = controller.selectedVenueImage!
-        eventVenueImageView.image = venueImage
-        
+    //MARK:- Venue Picking Delegate Function
+    func passVenueDetails(name: String, address: String, price: String, image: UIImage) {
+        eventVenueNameLabel.text = name
+        eventVenueAddressLabel.text = address
+        eventVenuePriceLabel.text = price
+        eventVenueImageView.image = image
     }
 
 
