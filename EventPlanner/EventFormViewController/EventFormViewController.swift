@@ -1,6 +1,6 @@
 import UIKit
 
-class EventFormViewController: UITableViewController, EventVenueDetailsPassing {
+class EventFormViewController: UITableViewController, EventVenueDetailsPassing, EventFoodAndDrinksDetailsPassing {
     
     @IBOutlet weak var eventNameTextField: UITextField!
     @IBOutlet weak var eventDescriptionTextView: UITextView!
@@ -19,6 +19,10 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing {
     @IBOutlet weak var eventTimeLabel: UILabel!
     @IBOutlet weak var eventDateAndTimePicker: UIDatePicker!
     @IBOutlet weak var eventDateAmPmSelectionLabel: UILabel!
+    
+    @IBOutlet weak var eventFoodAndDrinksNoOfItemsLabel: UILabel!
+    @IBOutlet weak var eventFoodAndDrinksSelectedItemsLabel: UILabel!
+    @IBOutlet weak var eventFoodAndDrinkTotalCostLabel: UILabel!
     
     var categoryLabel = "No Category"
     var categoryImage: UIImage = UIImage(named: "no icon1")!
@@ -55,13 +59,21 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing {
             controller.selectedCategoryImage = categoryImage
         }
         
-        //PickEventVenue
+        //EventVenue
         if segue.identifier == "PickEventVenue" {
             let controller = segue.destination as! EventVenuePickerViewController
             controller.selectedVenueName = venueNameLabel
             controller.selectedVenueAddress = venueAddressLabel
             controller.selectedVenuePrice = venuePriceLabel
             controller.selectedVenueImage = venueImage
+            controller.delegate = self
+        }
+        
+        //EventFoodAndDrinks
+        if segue.identifier == "PickEventFoodAndDrinks" {
+            let controller = segue.destination as! EventFoodAndDrinksViewController
+            let eventNoOfPersons: Int? = Int(eventNoOfPersonlabel.text!)
+            controller.noOfPersons = eventNoOfPersons!
             controller.delegate = self
         }
     }
@@ -86,6 +98,21 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing {
         eventVenueImageView.image = image
     }
 
+    //MARK:- Food And Drinks Delegate Function
+    func passFoodAndDrinksDetails(noOfSelectedItems: Int, totalCost: Int, selectedItems: [String]) {
+        eventFoodAndDrinksNoOfItemsLabel.text = String(noOfSelectedItems)
+        eventFoodAndDrinkTotalCostLabel.text = String(totalCost)
+        
+        var names: String = ""
+        
+        for i in 0..<selectedItems.count {
+            names = names + (selectedItems[i] + "\n")
+            print(names)
+        }
+        
+        eventFoodAndDrinksSelectedItemsLabel.text = names
+        
+    }
     
     //MARK:- Action
     @IBAction func PersonStepper(_ sender: UIStepper) {

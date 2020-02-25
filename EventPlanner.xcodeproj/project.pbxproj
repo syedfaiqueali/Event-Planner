@@ -19,6 +19,8 @@
 		2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB23EA923FAFBFB0002C54E /* CategoryViewCell.swift */; };
 		2DB23EAD23FBC44B0002C54E /* EventVenuePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB23EAC23FBC44B0002C54E /* EventVenuePickerViewController.swift */; };
 		2DB23EAF23FBC4910002C54E /* VenueViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB23EAE23FBC4910002C54E /* VenueViewCell.swift */; };
+		2DFAB18324058F0C00F42D1E /* EventFoodAndDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAB18224058F0C00F42D1E /* EventFoodAndDrinksViewController.swift */; };
+		2DFAB18524058FE100F42D1E /* FoodAndDrinksViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAB18424058FE100F42D1E /* FoodAndDrinksViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		2DB23EA923FAFBFB0002C54E /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		2DB23EAC23FBC44B0002C54E /* EventVenuePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVenuePickerViewController.swift; sourceTree = "<group>"; };
 		2DB23EAE23FBC4910002C54E /* VenueViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewCell.swift; sourceTree = "<group>"; };
+		2DFAB18224058F0C00F42D1E /* EventFoodAndDrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFoodAndDrinksViewController.swift; sourceTree = "<group>"; };
+		2DFAB18424058FE100F42D1E /* FoodAndDrinksViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAndDrinksViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		2D67B40E23F9766700BB6225 /* EventPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				2DFAB18124058EC600F42D1E /* EventFoodAndDrinksViewController */,
 				2DB23EAB23FBB9910002C54E /* EventVenuePickerViewController */,
 				2DB23EA623FAFA590002C54E /* EventCategoryPickerViewController */,
 				2D67B42323F9769600BB6225 /* EventFormViewController */,
@@ -123,6 +128,15 @@
 				2D1E80342401552A0036FAEC /* VenueMapViewController */,
 			);
 			path = EventVenuePickerViewController;
+			sourceTree = "<group>";
+		};
+		2DFAB18124058EC600F42D1E /* EventFoodAndDrinksViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DFAB18224058F0C00F42D1E /* EventFoodAndDrinksViewController.swift */,
+				2DFAB18424058FE100F42D1E /* FoodAndDrinksViewCell.swift */,
+			);
+			path = EventFoodAndDrinksViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,12 +210,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFAB18524058FE100F42D1E /* FoodAndDrinksViewCell.swift in Sources */,
 				2D67B42523F976B900BB6225 /* EventFormViewController.swift in Sources */,
 				2D67B41023F9766700BB6225 /* AppDelegate.swift in Sources */,
 				2DB23EAF23FBC4910002C54E /* VenueViewCell.swift in Sources */,
 				2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */,
 				2DB23EA823FAFA8B0002C54E /* EventCategoryPickerViewController.swift in Sources */,
 				2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */,
+				2DFAB18324058F0C00F42D1E /* EventFoodAndDrinksViewController.swift in Sources */,
 				2DB23EAD23FBC44B0002C54E /* EventVenuePickerViewController.swift in Sources */,
 				2D1E80362401557F0036FAEC /* MapViewController.swift in Sources */,
 				2D1E80382401AB570036FAEC /* Date+Extension.swift in Sources */,
