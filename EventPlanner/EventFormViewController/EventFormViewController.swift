@@ -22,7 +22,11 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
     
     @IBOutlet weak var eventFoodAndDrinksNoOfItemsLabel: UILabel!
     @IBOutlet weak var eventFoodAndDrinksSelectedItemsLabel: UILabel!
-    @IBOutlet weak var eventFoodAndDrinkTotalCostLabel: UILabel!
+    @IBOutlet weak var eventFoodAndDrinksCostLabel: UILabel!
+    
+    @IBOutlet weak var eventVenueTotalCostLabel: UILabel!
+    @IBOutlet weak var eventFoodAndDrinksTotalCostLabel: UILabel!
+    @IBOutlet weak var eventTotalCostLabel: UILabel!
     
     var categoryLabel = "No Category"
     var categoryImage: UIImage = UIImage(named: "no icon1")!
@@ -47,7 +51,6 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         eventDateAndTimePicker?.datePickerMode = .dateAndTime
         eventDateAndTimePicker?.minimumDate = Date.calculateDate(day: 1, month: 1, year: 2012, hour: 0, min: 0)
         eventDateAndTimePicker?.maximumDate = Date.calculateDate(day: 31, month: 1, year: 2022, hour: 0, min: 0)
-        
     }
 
     // MARK: - Navigation
@@ -101,7 +104,7 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
     //MARK:- Food And Drinks Delegate Function
     func passFoodAndDrinksDetails(noOfSelectedItems: Int, totalCost: Int, selectedItems: [String]) {
         eventFoodAndDrinksNoOfItemsLabel.text = String(noOfSelectedItems)
-        eventFoodAndDrinkTotalCostLabel.text = String(totalCost)
+        eventFoodAndDrinksCostLabel.text = String(totalCost)
         
         var names: String = ""
         
@@ -133,5 +136,31 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         }
     }
     
-
+    //MARK:- Helper Methods
+    @IBAction func calculateEventCost(_ sender: Any) {
+        
+        let venueCost: Int? = Int(eventVenuePriceLabel.text!)
+        let foodAndDrinksCost: Int? = Int(eventFoodAndDrinksCostLabel.text!)
+        let persons: Int? = Int(eventNoOfPersonlabel.text!)
+        let totalCost: Int?
+        
+        //"Picnic", "Conference", "Meeting", "Concert"
+        if eventCategoryLabel.text! == "Picnic"{
+            
+            eventVenueTotalCostLabel.text = String(persons!*venueCost!)
+            eventFoodAndDrinksTotalCostLabel.text = String(foodAndDrinksCost!)
+            
+            totalCost = (persons!*venueCost!)+foodAndDrinksCost!
+            eventTotalCostLabel.text = String(totalCost!)
+        }
+        else {
+            eventVenueTotalCostLabel.text = String(venueCost!)
+            eventFoodAndDrinksTotalCostLabel.text = String(foodAndDrinksCost!)
+            
+            totalCost = (venueCost!)+foodAndDrinksCost!
+            eventTotalCostLabel.text = String(totalCost!)
+        }
+    }
+    
+    
 }

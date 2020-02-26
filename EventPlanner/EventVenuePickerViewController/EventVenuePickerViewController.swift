@@ -15,7 +15,7 @@ class EventVenuePickerViewController: UIViewController, UITableViewDataSource, U
     
     let venueAddress = ["Hawksbay Beach, Karachi", "Kundmalir Beach, Balochistan", "Ormara Beach, Balochistan", "Turtle Beach, Karachi", "Gorakh Hills, Sindh", "Moola Chotok, Balochistan","Ranikot, Sindh"]
     
-    let venuePrices = ["1000/per", "2500/per", "6000/per", "1500/per", "7000/per", "5000/per","5000/per"]
+    let venuePrices = ["1000", "2500", "6000", "1500", "7000", "5000","5000"]
     
     let venueCoordinates = [
                             CLLocationCoordinate2D(latitude: 37.333411, longitude: -122.008679),
