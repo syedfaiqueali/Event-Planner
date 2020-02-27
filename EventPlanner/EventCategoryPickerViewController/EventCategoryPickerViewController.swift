@@ -54,7 +54,7 @@ class EventCategoryPickerViewController: UIViewController, UITableViewDataSource
             let cell = sender as! UITableViewCell
             if let indexPath = tableView.indexPath(for: cell) {
                 selectedCategoryName = categoriesNames[indexPath.row]
-                selectedCategoryImage = categoriesImages[indexPath.row]
+                //selectedCategoryImage = categoriesImages[indexPath.row]
             }
             
         }

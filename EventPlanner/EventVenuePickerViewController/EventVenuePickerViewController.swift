@@ -61,6 +61,10 @@ class EventVenuePickerViewController: UIViewController, UITableViewDataSource, U
         cell.venueAddressLabel.text! = venueAddress[indexPath.row]
         cell.venuePriceLabel.text! = venuePrices[indexPath.row]
         
+        let backgroudView = UIView()
+        backgroudView.backgroundColor = UIColor(red: 244/255, green: 197/255, blue: 132/255, alpha: 1)
+        cell.selectedBackgroundView = backgroudView
+        
         return cell
     }
     

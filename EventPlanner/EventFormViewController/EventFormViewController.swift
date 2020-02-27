@@ -6,7 +6,7 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
     @IBOutlet weak var eventDescriptionTextView: UITextView!
     
     @IBOutlet weak var eventCategoryLabel: UILabel!
-    @IBOutlet weak var eventCategoryImage: UIImageView!
+    //@IBOutlet weak var eventCategoryImage: UIImageView!
     
     @IBOutlet weak var eventVenueImageView: UIImageView!
     @IBOutlet weak var eventVenueNameLabel: UILabel!
@@ -39,18 +39,7 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        eventCategoryLabel.text = categoryLabel
-        eventCategoryImage.image = categoryImage
-        
-        eventVenueNameLabel.text = venueNameLabel
-        eventVenueAddressLabel.text = venueAddressLabel
-        eventVenuePriceLabel.text = venuePriceLabel
-        eventVenueImageView.image = venueImage
-        
-        //dateandtime picker configuration
-        eventDateAndTimePicker?.datePickerMode = .dateAndTime
-        eventDateAndTimePicker?.minimumDate = Date.calculateDate(day: 1, month: 1, year: 2012, hour: 0, min: 0)
-        eventDateAndTimePicker?.maximumDate = Date.calculateDate(day: 31, month: 1, year: 2022, hour: 0, min: 0)
+        updateUI()
     }
 
     // MARK: - Navigation
@@ -59,7 +48,7 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         if segue.identifier == "PickEventCategory" {
             let controller = segue.destination as! EventCategoryPickerViewController
             controller.selectedCategoryName = categoryLabel
-            controller.selectedCategoryImage = categoryImage
+            //controller.selectedCategoryImage = categoryImage
         }
         
         //EventVenue
@@ -88,8 +77,8 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         categoryLabel = controller.selectedCategoryName
         eventCategoryLabel.text = categoryLabel
         
-        categoryImage = controller.selectedCategoryImage!
-        eventCategoryImage.image = categoryImage
+        //categoryImage = controller.selectedCategoryImage!
+        //eventCategoryImage.image = categoryImage
         
     }
     
@@ -162,5 +151,19 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         }
     }
     
+    func updateUI() {
+        eventCategoryLabel.text = categoryLabel
+        //eventCategoryImage.image = categoryImage
+        
+        eventVenueNameLabel.text = venueNameLabel
+        eventVenueAddressLabel.text = venueAddressLabel
+        eventVenuePriceLabel.text = venuePriceLabel
+        eventVenueImageView.image = venueImage
+        
+        //dateandtime picker configuration
+        eventDateAndTimePicker?.datePickerMode = .dateAndTime
+        eventDateAndTimePicker?.minimumDate = Date.calculateDate(day: 1, month: 1, year: 2012, hour: 0, min: 0)
+        eventDateAndTimePicker?.maximumDate = Date.calculateDate(day: 31, month: 1, year: 2022, hour: 0, min: 0)
+    }
     
 }

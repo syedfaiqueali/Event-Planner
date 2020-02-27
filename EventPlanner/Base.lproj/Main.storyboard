@@ -66,35 +66,28 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Category" id="qZK-iK-9GW">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="120" id="7kq-6D-ehf">
-                                        <rect key="frame" x="0.0" y="295" width="375" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="7kq-6D-ehf">
+                                        <rect key="frame" x="0.0" y="295" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7kq-6D-ehf" id="GcB-xu-7nE">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="344" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no icon1" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fND-ft-Smh">
-                                                    <rect key="frame" x="16" y="15" width="156" height="90"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="90" id="XWK-uL-DTI"/>
-                                                        <constraint firstAttribute="width" constant="156" id="oje-tV-q5G"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKg-oi-XZh">
-                                                    <rect key="frame" x="185" y="50" width="141" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKg-oi-XZh">
+                                                    <rect key="frame" x="226" y="18" width="110" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTh-iY-eI0">
+                                                    <rect key="frame" x="20" y="18" width="152" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="bKg-oi-XZh" firstAttribute="leading" secondItem="fND-ft-Smh" secondAttribute="trailing" constant="13" id="5x6-12-7Nr"/>
-                                                <constraint firstItem="bKg-oi-XZh" firstAttribute="top" secondItem="GcB-xu-7nE" secondAttribute="top" constant="50" id="6OK-qF-DYk"/>
-                                                <constraint firstAttribute="bottom" secondItem="fND-ft-Smh" secondAttribute="bottom" constant="15" id="AcZ-rN-yZe"/>
-                                                <constraint firstAttribute="trailing" secondItem="bKg-oi-XZh" secondAttribute="trailing" constant="18" id="LNr-b4-a1A"/>
-                                                <constraint firstItem="fND-ft-Smh" firstAttribute="leading" secondItem="GcB-xu-7nE" secondAttribute="leading" constant="16" id="j6V-sT-WO3"/>
-                                                <constraint firstItem="fND-ft-Smh" firstAttribute="top" secondItem="GcB-xu-7nE" secondAttribute="top" constant="15" id="viA-fj-F8j"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="LfC-bg-RFq" kind="show" identifier="PickEventCategory" id="cme-fC-FeR"/>
@@ -105,7 +98,7 @@
                             <tableViewSection headerTitle="Venue" id="9gl-8W-ooT">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="260" id="93B-0U-uV8">
-                                        <rect key="frame" x="0.0" y="471" width="375" height="260"/>
+                                        <rect key="frame" x="0.0" y="411" width="375" height="260"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="93B-0U-uV8" id="FXE-BW-IGk">
                                             <rect key="frame" x="0.0" y="0.0" width="344" height="260"/>
@@ -159,7 +152,7 @@
                             <tableViewSection headerTitle="No of Persons" id="6Rj-Hp-lQZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="94Z-3c-QIH">
-                                        <rect key="frame" x="0.0" y="787" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="727" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="94Z-3c-QIH" id="bPs-Qs-FHT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -206,7 +199,7 @@
                             <tableViewSection headerTitle="Food &amp; Drinks" id="9IJ-mL-ubZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="140" id="aVR-cU-NoZ">
-                                        <rect key="frame" x="0.0" y="886.5" width="375" height="140"/>
+                                        <rect key="frame" x="0.0" y="826.5" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aVR-cU-NoZ" id="tsv-eb-Gou">
                                             <rect key="frame" x="0.0" y="0.0" width="344" height="140"/>
@@ -266,7 +259,7 @@
                             <tableViewSection headerTitle="Data And Time" id="dKD-WF-ktl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="290" id="osy-3o-j2j">
-                                        <rect key="frame" x="0.0" y="1082.5" width="375" height="290"/>
+                                        <rect key="frame" x="0.0" y="1022.5" width="375" height="290"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="osy-3o-j2j" id="7XJ-CM-hck">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
@@ -321,7 +314,7 @@
                             <tableViewSection headerTitle="Total Event Cost" id="wvA-m0-Qmh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="EXI-YJ-tS9">
-                                        <rect key="frame" x="0.0" y="1428.5" width="375" height="175"/>
+                                        <rect key="frame" x="0.0" y="1368.5" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EXI-YJ-tS9" id="DYu-5i-gBi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
@@ -407,7 +400,6 @@
                     <navigationItem key="navigationItem" title="Event Form" id="ilF-96-92U"/>
                     <size key="freeformSize" width="375" height="1640"/>
                     <connections>
-                        <outlet property="eventCategoryImage" destination="fND-ft-Smh" id="0MZ-ew-EJh"/>
                         <outlet property="eventCategoryLabel" destination="bKg-oi-XZh" id="j8Q-C1-6am"/>
                         <outlet property="eventDateAmPmSelectionLabel" destination="WvD-k1-S1Y" id="wd7-jt-cFa"/>
                         <outlet property="eventDateAndTimePicker" destination="u0H-Ll-D0v" id="tSK-nS-7zp"/>
@@ -882,7 +874,4 @@
             <point key="canvasLocation" x="116" y="94.902548725637189"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="no icon1" width="1225" height="560"/>
-    </resources>
 </document>
