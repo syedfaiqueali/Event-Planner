@@ -1,4 +1,5 @@
 import UIKit
+import CoreData
 
 class EventFormViewController: UITableViewController, EventVenueDetailsPassing, EventFoodAndDrinksDetailsPassing {
     
@@ -125,7 +126,93 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         }
     }
     
+    @IBAction func done() {
+        guard let nameToSave = eventNameTextField.text else {
+            return
+        }
+        guard let descriptionToSave = eventDescriptionTextView.text else {
+            return
+        }
+        guard let categoryToSave = eventCategoryLabel.text else {
+            return
+        }
+        guard let venueNameToSave = eventVenueNameLabel.text else {
+            return
+        }
+        guard let venueAddressToSave = eventVenueAddressLabel.text else {
+            return
+        }
+        guard let venueImageToSave = eventVenueImageView.image else {
+            return
+        }
+        guard let personCountToSave = eventNoOfPersonlabel.text else {
+            return
+        }
+        guard let dateToSave = eventDateLabel.text else {
+            return
+        }
+        guard let timeToSave = eventTimeLabel.text else {
+            return
+        }
+        guard let totalVenueCostToSave = eventVenueTotalCostLabel.text else {
+            return
+        }
+        guard let totalRefreshmentCostToSave = eventFoodAndDrinksTotalCostLabel.text else {
+            return
+        }
+        guard let totalEventCostToSave = eventTotalCostLabel.text else {
+            return
+        }
+        
+        
+        self.save(e_name: nameToSave, e_description: descriptionToSave, e_category: categoryToSave, e_venue_name: venueNameToSave, e_venue_address: venueAddressToSave, e_venue_image: venueImageToSave, e_persons_count: personCountToSave, e_date: dateToSave, e_time: timeToSave, e_total_venue_cost: totalVenueCostToSave, e_total_refreshment_cost: totalRefreshmentCostToSave, e_total_cost: totalEventCostToSave)
+        
+        updateUI()
+        
+    }
+    
+    
     //MARK:- Helper Methods
+    func save(e_name: String, e_description: String, e_category: String, e_venue_name: String, e_venue_address: String, e_venue_image: UIImage, e_persons_count: String, e_date: String, e_time: String, e_total_venue_cost: String, e_total_refreshment_cost: String, e_total_cost: String) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        //1
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //2
+        let entity = NSEntityDescription.entity(forEntityName: "Event", in: managedContext)!
+        
+        let events = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        //3
+        events.setValue(e_name, forKey: "e_name")
+        events.setValue(e_description, forKey: "e_description")
+        events.setValue(e_category, forKey: "e_category")
+        events.setValue(e_venue_name, forKey: "e_venue_name")
+        events.setValue(e_venue_address, forKey: "e_venue_address")
+        let jpg = e_venue_image.jpegData(compressionQuality: 0.75)
+        events.setValue(jpg, forKey: "e_venue_image")
+        events.setValue(e_persons_count, forKey: "e_persons_count")
+        events.setValue(e_date, forKey: "e_date")
+        events.setValue(e_time, forKey: "e_time")
+        events.setValue(e_total_venue_cost, forKey: "e_total_venue_cost")
+        events.setValue(e_total_refreshment_cost, forKey: "e_total_refreshment_cost")
+        events.setValue(e_total_cost, forKey: "e_total_cost")
+        
+        //4
+        do {
+            try managedContext.save()
+            let myEvent = MyEventsViewController()
+            myEvent.events.append(events as! Event)
+            //event.append(events as! Event)
+        } catch {
+            fatalCoreDataError(error)
+        }
+    }
+    
     @IBAction func calculateEventCost(_ sender: Any) {
         
         let venueCost: Int? = Int(eventVenuePriceLabel.text!)

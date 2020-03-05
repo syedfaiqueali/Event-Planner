@@ -15,6 +15,12 @@
 		2D67B41923F9766900BB6225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41823F9766900BB6225 /* Assets.xcassets */; };
 		2D67B41C23F9766900BB6225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41A23F9766900BB6225 /* LaunchScreen.storyboard */; };
 		2D67B42523F976B900BB6225 /* EventFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B42423F976B900BB6225 /* EventFormViewController.swift */; };
+		2DA4171D241148EA0065AC44 /* Data Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4171B241148EA0065AC44 /* Data Model.xcdatamodeld */; };
+		2DA41720241149F10065AC44 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4171E241149F10065AC44 /* Event+CoreDataClass.swift */; };
+		2DA41721241149F10065AC44 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4171F241149F10065AC44 /* Event+CoreDataProperties.swift */; };
+		2DA4172324114AB30065AC44 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4172224114AB30065AC44 /* Functions.swift */; };
+		2DA4172C24114C350065AC44 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4172B24114C350065AC44 /* MyEventsViewController.swift */; };
+		2DA4173024114D020065AC44 /* MyEventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4172F24114D010065AC44 /* MyEventViewCell.swift */; };
 		2DB23EA823FAFA8B0002C54E /* EventCategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB23EA723FAFA8B0002C54E /* EventCategoryPickerViewController.swift */; };
 		2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB23EA923FAFBFB0002C54E /* CategoryViewCell.swift */; };
 		2DB23EAD23FBC44B0002C54E /* EventVenuePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB23EAC23FBC44B0002C54E /* EventVenuePickerViewController.swift */; };
@@ -34,6 +40,12 @@
 		2D67B41B23F9766900BB6225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D67B41D23F9766900BB6225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D67B42423F976B900BB6225 /* EventFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFormViewController.swift; sourceTree = "<group>"; };
+		2DA4171C241148EA0065AC44 /* Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data Model.xcdatamodel"; sourceTree = "<group>"; };
+		2DA4171E241149F10065AC44 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2DA4171F241149F10065AC44 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DA4172224114AB30065AC44 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		2DA4172B24114C350065AC44 /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
+		2DA4172F24114D010065AC44 /* MyEventViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventViewCell.swift; sourceTree = "<group>"; };
 		2DB23EA723FAFA8B0002C54E /* EventCategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoryPickerViewController.swift; sourceTree = "<group>"; };
 		2DB23EA923FAFBFB0002C54E /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		2DB23EAC23FBC44B0002C54E /* EventVenuePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVenuePickerViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +84,9 @@
 		2D67B40323F9766700BB6225 = {
 			isa = PBXGroup;
 			children = (
+				2DA4171E241149F10065AC44 /* Event+CoreDataClass.swift */,
+				2DA4171F241149F10065AC44 /* Event+CoreDataProperties.swift */,
+				2DA4171B241148EA0065AC44 /* Data Model.xcdatamodeld */,
 				2D67B40E23F9766700BB6225 /* EventPlanner */,
 				2D67B40D23F9766700BB6225 /* Products */,
 			);
@@ -88,16 +103,15 @@
 		2D67B40E23F9766700BB6225 /* EventPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				2DFAB18124058EC600F42D1E /* EventFoodAndDrinksViewController */,
-				2DB23EAB23FBB9910002C54E /* EventVenuePickerViewController */,
-				2DB23EA623FAFA590002C54E /* EventCategoryPickerViewController */,
 				2D67B42323F9769600BB6225 /* EventFormViewController */,
+				2DA4172A24114BC70065AC44 /* MyEventsViewController */,
 				2D67B40F23F9766700BB6225 /* AppDelegate.swift */,
 				2D67B41123F9766700BB6225 /* SceneDelegate.swift */,
 				2D67B41523F9766700BB6225 /* Main.storyboard */,
 				2D67B41823F9766900BB6225 /* Assets.xcassets */,
 				2D67B41A23F9766900BB6225 /* LaunchScreen.storyboard */,
 				2D67B41D23F9766900BB6225 /* Info.plist */,
+				2DA4175124116F650065AC44 /* Functions+Extensions */,
 			);
 			path = EventPlanner;
 			sourceTree = "<group>";
@@ -106,9 +120,29 @@
 			isa = PBXGroup;
 			children = (
 				2D67B42423F976B900BB6225 /* EventFormViewController.swift */,
-				2D1E80392401ADF50036FAEC /* DateTimePicker extension */,
+				2DB23EA623FAFA590002C54E /* EventCategoryPickerViewController */,
+				2DB23EAB23FBB9910002C54E /* EventVenuePickerViewController */,
+				2DFAB18124058EC600F42D1E /* EventFoodAndDrinksViewController */,
 			);
 			path = EventFormViewController;
+			sourceTree = "<group>";
+		};
+		2DA4172A24114BC70065AC44 /* MyEventsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4172B24114C350065AC44 /* MyEventsViewController.swift */,
+				2DA4172F24114D010065AC44 /* MyEventViewCell.swift */,
+			);
+			path = MyEventsViewController;
+			sourceTree = "<group>";
+		};
+		2DA4175124116F650065AC44 /* Functions+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E80392401ADF50036FAEC /* DateTimePicker extension */,
+				2DA4172224114AB30065AC44 /* Functions.swift */,
+			);
+			path = "Functions+Extensions";
 			sourceTree = "<group>";
 		};
 		2DB23EA623FAFA590002C54E /* EventCategoryPickerViewController */ = {
@@ -211,13 +245,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DFAB18524058FE100F42D1E /* FoodAndDrinksViewCell.swift in Sources */,
+				2DA4173024114D020065AC44 /* MyEventViewCell.swift in Sources */,
+				2DA4172C24114C350065AC44 /* MyEventsViewController.swift in Sources */,
 				2D67B42523F976B900BB6225 /* EventFormViewController.swift in Sources */,
 				2D67B41023F9766700BB6225 /* AppDelegate.swift in Sources */,
 				2DB23EAF23FBC4910002C54E /* VenueViewCell.swift in Sources */,
 				2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */,
 				2DB23EA823FAFA8B0002C54E /* EventCategoryPickerViewController.swift in Sources */,
+				2DA4171D241148EA0065AC44 /* Data Model.xcdatamodeld in Sources */,
+				2DA41720241149F10065AC44 /* Event+CoreDataClass.swift in Sources */,
+				2DA4172324114AB30065AC44 /* Functions.swift in Sources */,
 				2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */,
 				2DFAB18324058F0C00F42D1E /* EventFoodAndDrinksViewController.swift in Sources */,
+				2DA41721241149F10065AC44 /* Event+CoreDataProperties.swift in Sources */,
 				2DB23EAD23FBC44B0002C54E /* EventVenuePickerViewController.swift in Sources */,
 				2D1E80362401557F0036FAEC /* MapViewController.swift in Sources */,
 				2D1E80382401AB570036FAEC /* Date+Extension.swift in Sources */,
@@ -416,6 +456,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2DA4171B241148EA0065AC44 /* Data Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2DA4171C241148EA0065AC44 /* Data Model.xcdatamodel */,
+			);
+			currentVersion = 2DA4171C241148EA0065AC44 /* Data Model.xcdatamodel */;
+			path = "Data Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2D67B40423F9766700BB6225 /* Project object */;
 }
