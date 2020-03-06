@@ -13,18 +13,20 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
     }
     
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchingRequestFromCoreData()
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventLocationCell") as! MyEventViewCell
@@ -32,11 +34,21 @@ class MyEventsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.myEventNameLabel.text = event.e_name
         cell.myEventTimeLabel.text = event.e_date
         cell.myEventImageView.image = UIImage(data: event.e_venue_image)
-        //cell.myEventImageView.layer.cornerRadius = cell.myEventImageView.frame.size.width/2
+        cell.myEventImageView.layer.cornerRadius = cell.myEventImageView.frame.size.width/2
         //cell.myEventImageView.clipsToBounds = true
-        cell.myEventImageView.layer.cornerRadius = 50
+        //cell.myEventImageView.layer.cornerRadius = 50
         return cell
         
+    }
+    
+    //MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let detailViewController = segue.destination as! DetailViewController
+            let indexPath = sender as! IndexPath
+            let searchResult = events[indexPath.row]
+            detailViewController.selectedEvent = searchResult
+        }
     }
     
     //MARK:- Helper Methods

@@ -15,6 +15,11 @@
 		2D67B41923F9766900BB6225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41823F9766900BB6225 /* Assets.xcassets */; };
 		2D67B41C23F9766900BB6225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41A23F9766900BB6225 /* LaunchScreen.storyboard */; };
 		2D67B42523F976B900BB6225 /* EventFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B42423F976B900BB6225 /* EventFormViewController.swift */; };
+		2D8BF3C524128D91003624AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BF3C424128D91003624AB /* DetailViewController.swift */; };
+		2D8BF3C824128E8F003624AB /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BF3C724128E8F003624AB /* DimmingPresentationController.swift */; };
+		2D8BF3CA24128ED5003624AB /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BF3C924128ED5003624AB /* GradientView.swift */; };
+		2D8BF3CC24128F0C003624AB /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BF3CB24128F0C003624AB /* BounceAnimationController.swift */; };
+		2D8BF3CE24128F49003624AB /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BF3CD24128F49003624AB /* SlideOutAnimationController.swift */; };
 		2DA4171D241148EA0065AC44 /* Data Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4171B241148EA0065AC44 /* Data Model.xcdatamodeld */; };
 		2DA41720241149F10065AC44 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4171E241149F10065AC44 /* Event+CoreDataClass.swift */; };
 		2DA41721241149F10065AC44 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4171F241149F10065AC44 /* Event+CoreDataProperties.swift */; };
@@ -43,6 +48,11 @@
 		2D67B41B23F9766900BB6225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D67B41D23F9766900BB6225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D67B42423F976B900BB6225 /* EventFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFormViewController.swift; sourceTree = "<group>"; };
+		2D8BF3C424128D91003624AB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2D8BF3C724128E8F003624AB /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		2D8BF3C924128ED5003624AB /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		2D8BF3CB24128F0C003624AB /* BounceAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
+		2D8BF3CD24128F49003624AB /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 		2DA4171C241148EA0065AC44 /* Data Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data Model.xcdatamodel"; sourceTree = "<group>"; };
 		2DA4171E241149F10065AC44 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2DA4171F241149F10065AC44 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -114,8 +124,8 @@
 				2DA41752241183060065AC44 /* EventHomeViewController */,
 				2DA4172A24114BC70065AC44 /* MyEventsViewController */,
 				2D67B42323F9769600BB6225 /* EventFormViewController */,
-				2D67B41523F9766700BB6225 /* Main.storyboard */,
 				2DA4175124116F650065AC44 /* Functions+Extensions */,
+				2D67B41523F9766700BB6225 /* Main.storyboard */,
 				2D67B41823F9766900BB6225 /* Assets.xcassets */,
 				2D67B41A23F9766900BB6225 /* LaunchScreen.storyboard */,
 				2D67B41D23F9766900BB6225 /* Info.plist */,
@@ -134,11 +144,32 @@
 			path = EventFormViewController;
 			sourceTree = "<group>";
 		};
+		2D8BF3C324128CF4003624AB /* Event Popup-ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D8BF3C424128D91003624AB /* DetailViewController.swift */,
+				2D8BF3C624128E6B003624AB /* Dimming+Gradient+Annimation */,
+			);
+			path = "Event Popup-ViewController";
+			sourceTree = "<group>";
+		};
+		2D8BF3C624128E6B003624AB /* Dimming+Gradient+Annimation */ = {
+			isa = PBXGroup;
+			children = (
+				2D8BF3C724128E8F003624AB /* DimmingPresentationController.swift */,
+				2D8BF3C924128ED5003624AB /* GradientView.swift */,
+				2D8BF3CB24128F0C003624AB /* BounceAnimationController.swift */,
+				2D8BF3CD24128F49003624AB /* SlideOutAnimationController.swift */,
+			);
+			path = "Dimming+Gradient+Annimation";
+			sourceTree = "<group>";
+		};
 		2DA4172A24114BC70065AC44 /* MyEventsViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2DA4172B24114C350065AC44 /* MyEventsViewController.swift */,
 				2DA4172F24114D010065AC44 /* MyEventViewCell.swift */,
+				2D8BF3C324128CF4003624AB /* Event Popup-ViewController */,
 			);
 			path = MyEventsViewController;
 			sourceTree = "<group>";
@@ -262,13 +293,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DFAB18524058FE100F42D1E /* FoodAndDrinksViewCell.swift in Sources */,
+				2D8BF3CA24128ED5003624AB /* GradientView.swift in Sources */,
 				2DA4173024114D020065AC44 /* MyEventViewCell.swift in Sources */,
 				2DA41756241184300065AC44 /* EventHomeLayout.swift in Sources */,
 				2DA4172C24114C350065AC44 /* MyEventsViewController.swift in Sources */,
 				2D67B42523F976B900BB6225 /* EventFormViewController.swift in Sources */,
 				2D67B41023F9766700BB6225 /* AppDelegate.swift in Sources */,
+				2D8BF3C524128D91003624AB /* DetailViewController.swift in Sources */,
 				2DB23EAF23FBC4910002C54E /* VenueViewCell.swift in Sources */,
 				2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */,
+				2D8BF3CC24128F0C003624AB /* BounceAnimationController.swift in Sources */,
 				2DB23EA823FAFA8B0002C54E /* EventCategoryPickerViewController.swift in Sources */,
 				2DA4171D241148EA0065AC44 /* Data Model.xcdatamodeld in Sources */,
 				2DA41720241149F10065AC44 /* Event+CoreDataClass.swift in Sources */,
@@ -277,6 +311,8 @@
 				2DA4172324114AB30065AC44 /* Functions.swift in Sources */,
 				2DB23EAA23FAFBFB0002C54E /* CategoryViewCell.swift in Sources */,
 				2DFAB18324058F0C00F42D1E /* EventFoodAndDrinksViewController.swift in Sources */,
+				2D8BF3CE24128F49003624AB /* SlideOutAnimationController.swift in Sources */,
+				2D8BF3C824128E8F003624AB /* DimmingPresentationController.swift in Sources */,
 				2DA41721241149F10065AC44 /* Event+CoreDataProperties.swift in Sources */,
 				2DB23EAD23FBC44B0002C54E /* EventVenuePickerViewController.swift in Sources */,
 				2D1E80362401557F0036FAEC /* MapViewController.swift in Sources */,
