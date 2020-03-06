@@ -7,7 +7,6 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
     @IBOutlet weak var eventDescriptionTextView: UITextView!
     
     @IBOutlet weak var eventCategoryLabel: UILabel!
-    //@IBOutlet weak var eventCategoryImage: UIImageView!
     
     @IBOutlet weak var eventVenueImageView: UIImageView!
     @IBOutlet weak var eventVenueNameLabel: UILabel!
@@ -220,37 +219,57 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         let persons: Int? = Int(eventNoOfPersonlabel.text!)
         let totalCost: Int?
         
-        //"Picnic", "Conference", "Meeting", "Concert"
-        if eventCategoryLabel.text! == "Picnic"{
-            
+        let eventCategory: String
+        eventCategory = eventCategoryLabel.text!
+        
+        switch eventCategory {
+        case "Picnic","Meeting","Concert":
             eventVenueTotalCostLabel.text = String(persons!*venueCost!)
             eventFoodAndDrinksTotalCostLabel.text = String(foodAndDrinksCost!)
-            
             totalCost = (persons!*venueCost!)+foodAndDrinksCost!
             eventTotalCostLabel.text = String(totalCost!)
-        }
-        else {
+            
+        default:
             eventVenueTotalCostLabel.text = String(venueCost!)
             eventFoodAndDrinksTotalCostLabel.text = String(foodAndDrinksCost!)
             
             totalCost = (venueCost!)+foodAndDrinksCost!
             eventTotalCostLabel.text = String(totalCost!)
         }
+        
     }
     
     func updateUI() {
-        eventCategoryLabel.text = categoryLabel
-        //eventCategoryImage.image = categoryImage
+        //Name, Description and Category configuration
+        eventNameTextField.text = ""
+        eventDescriptionTextView.text = "(Your Event Description)"
+        eventCategoryLabel.text = "No Category"
         
+        //Venue Name, Address, Price and Image Configuration
         eventVenueNameLabel.text = venueNameLabel
         eventVenueAddressLabel.text = venueAddressLabel
         eventVenuePriceLabel.text = venuePriceLabel
         eventVenueImageView.image = venueImage
         
+        //No of Persons configuration
+        eventNoOfPersonlabel.text = "0"
+        
+        //Food and Drinks configuration
+        eventFoodAndDrinksNoOfItemsLabel.text = "--"
+        eventFoodAndDrinksSelectedItemsLabel.text = ""
+        eventFoodAndDrinksCostLabel.text = "---"
+        
         //dateandtime picker configuration
         eventDateAndTimePicker?.datePickerMode = .dateAndTime
         eventDateAndTimePicker?.minimumDate = Date.calculateDate(day: 1, month: 1, year: 2012, hour: 0, min: 0)
         eventDateAndTimePicker?.maximumDate = Date.calculateDate(day: 31, month: 1, year: 2022, hour: 0, min: 0)
+        eventDateLabel.text = "xx-xx-xxxx"
+        eventTimeLabel.text = "xx-xx"
+        
+        //Total event cost configuration
+        eventVenueTotalCostLabel.text = "--"
+        eventFoodAndDrinksTotalCostLabel.text = "--"
+        eventTotalCostLabel.text = "--"
     }
     
 }

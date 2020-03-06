@@ -102,7 +102,6 @@
 			children = (
 				2DA4171E241149F10065AC44 /* Event+CoreDataClass.swift */,
 				2DA4171F241149F10065AC44 /* Event+CoreDataProperties.swift */,
-				2DA4171B241148EA0065AC44 /* Data Model.xcdatamodeld */,
 				2D67B40E23F9766700BB6225 /* EventPlanner */,
 				2D67B40D23F9766700BB6225 /* Products */,
 			);
@@ -129,6 +128,7 @@
 				2D67B41823F9766900BB6225 /* Assets.xcassets */,
 				2D67B41A23F9766900BB6225 /* LaunchScreen.storyboard */,
 				2D67B41D23F9766900BB6225 /* Info.plist */,
+				2DA4171B241148EA0065AC44 /* Data Model.xcdatamodeld */,
 			);
 			path = EventPlanner;
 			sourceTree = "<group>";
