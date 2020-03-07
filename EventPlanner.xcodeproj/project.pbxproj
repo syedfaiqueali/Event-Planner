@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D1E80362401557F0036FAEC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E80352401557F0036FAEC /* MapViewController.swift */; };
 		2D1E80382401AB570036FAEC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E80372401AB570036FAEC /* Date+Extension.swift */; };
+		2D5069C22414055400B75A0A /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5069C12414055400B75A0A /* HudView.swift */; };
 		2D67B41023F9766700BB6225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B40F23F9766700BB6225 /* AppDelegate.swift */; };
 		2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D67B41123F9766700BB6225 /* SceneDelegate.swift */; };
 		2D67B41723F9766700BB6225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D67B41523F9766700BB6225 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		2D1E80352401557F0036FAEC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2D1E80372401AB570036FAEC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		2D5069C12414055400B75A0A /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		2D67B40C23F9766700BB6225 /* EventPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D67B40F23F9766700BB6225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D67B41123F9766700BB6225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				2DB23EA623FAFA590002C54E /* EventCategoryPickerViewController */,
 				2DB23EAB23FBB9910002C54E /* EventVenuePickerViewController */,
 				2DFAB18124058EC600F42D1E /* EventFoodAndDrinksViewController */,
+				2D5069C12414055400B75A0A /* HudView.swift */,
 			);
 			path = EventFormViewController;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				2D67B41223F9766700BB6225 /* SceneDelegate.swift in Sources */,
 				2D8BF3CC24128F0C003624AB /* BounceAnimationController.swift in Sources */,
 				2DB23EA823FAFA8B0002C54E /* EventCategoryPickerViewController.swift in Sources */,
+				2D5069C22414055400B75A0A /* HudView.swift in Sources */,
 				2DA4171D241148EA0065AC44 /* Data Model.xcdatamodeld in Sources */,
 				2DA41720241149F10065AC44 /* Event+CoreDataClass.swift in Sources */,
 				2DA41758241184E30065AC44 /* CustomCollectionViewCell.swift in Sources */,

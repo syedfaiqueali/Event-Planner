@@ -166,6 +166,13 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         
         self.save(e_name: nameToSave, e_description: descriptionToSave, e_category: categoryToSave, e_venue_name: venueNameToSave, e_venue_address: venueAddressToSave, e_venue_image: venueImageToSave, e_persons_count: personCountToSave, e_date: dateToSave, e_time: timeToSave, e_total_venue_cost: totalVenueCostToSave, e_total_refreshment_cost: totalRefreshmentCostToSave, e_total_cost: totalEventCostToSave)
         
+        let hudView = HudView.hud(inView: navigationController!.view, animated: true)
+        hudView.text = "Done"
+        afterDelay(0.6, run: {
+          hudView.hide()
+          self.navigationController?.popViewController(animated: true)
+        })
+        
         updateUI()
         
     }
