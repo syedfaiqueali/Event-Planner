@@ -28,6 +28,8 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
     @IBOutlet weak var eventFoodAndDrinksTotalCostLabel: UILabel!
     @IBOutlet weak var eventTotalCostLabel: UILabel!
     
+    @IBOutlet weak var eventTotalCalculationButton: UIButton!
+    
     var categoryLabel = "No Category"
     var categoryImage: UIImage = UIImage(named: "no icon1")!
     
@@ -247,6 +249,10 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
     }
     
     func updateUI() {
+        //view did load configuration
+        eventVenueImageView.layer.cornerRadius = 12
+        eventTotalCalculationButton.layer.cornerRadius = 7
+        
         //Name, Description and Category configuration
         eventNameTextField.text = ""
         eventDescriptionTextView.text = "(Your Event Description)"
@@ -262,9 +268,9 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         eventNoOfPersonlabel.text = "0"
         
         //Food and Drinks configuration
-        eventFoodAndDrinksNoOfItemsLabel.text = "--"
-        eventFoodAndDrinksSelectedItemsLabel.text = ""
-        eventFoodAndDrinksCostLabel.text = "---"
+        eventFoodAndDrinksNoOfItemsLabel.text = ""
+        eventFoodAndDrinksSelectedItemsLabel.text = "(Your selected items)"
+        eventFoodAndDrinksCostLabel.text = ""
         
         //dateandtime picker configuration
         eventDateAndTimePicker?.datePickerMode = .dateAndTime
@@ -274,9 +280,9 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
         eventTimeLabel.text = "xx-xx"
         
         //Total event cost configuration
-        eventVenueTotalCostLabel.text = "--"
-        eventFoodAndDrinksTotalCostLabel.text = "--"
-        eventTotalCostLabel.text = "--"
+        eventVenueTotalCostLabel.text = "- - - - - - "
+        eventFoodAndDrinksTotalCostLabel.text = "- - - - - - "
+        eventTotalCostLabel.text = "- - - - - - "
     }
     
 }

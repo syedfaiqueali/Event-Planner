@@ -6,7 +6,7 @@ class EventCategoryPickerViewController: UIViewController, UITableViewDataSource
     
     let categoriesNames = ["Picnic", "Conference", "Meeting", "Concert"]
     
-    let categoriesImages = [UIImage(named: "beach1")!,UIImage(named: "conference1")!,UIImage(named: "meeting1")!,UIImage(named: "concert1")!]
+    let categoriesImages = [UIImage(named: "beach2")!,UIImage(named: "conference1")!,UIImage(named: "meeting1")!,UIImage(named: "concert1")!]
     
     let categoriesDescription = ["Picnic is a form of enjoy used to entertain us, enjoy used to entertain us", "Conference is a form of enjoy used to entertain us, enjoy used to entertain us", "Meeting is a form of enjoy used to entertain us, enjoy used to entertain us", "Concert is a form of enjoy used to entertain us, enjoy used to entertain us"]
     
@@ -35,6 +35,7 @@ class EventCategoryPickerViewController: UIViewController, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryPickingCell") as! CategoryViewCell
         
         cell.categoryImageView.image = categoriesImages[indexPath.row]
+        cell.categoryImageView.layer.cornerRadius = 12
         cell.categoryNameLabel.text! = categoriesNames[indexPath.row]
         cell.categoryDescriptionLabel.text! = categoriesDescription[indexPath.row]
 
