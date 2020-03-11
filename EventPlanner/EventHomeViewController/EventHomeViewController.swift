@@ -6,7 +6,7 @@ class EventHomeViewController: UIViewController {
 
     let homeImages = [0,2,3,4,5,6,7,8,9]
     let homeImagesNames = ["Gorakh Hills", "Ranikot", "Kund Malir", "Moola Chotak", "Movenpick", "Pearl Continental", "Hawksbay", "Coffee Waghera", "Espresso"]
-    let homeImagesDescription = ["Gorakh Hills", "Ranikot", "Kund Malir", "Moola Chotak", "Movenpick", "Pearl Continental", "Hawksbay", "Coffee Waghera", "Espresso"]
+    let homeImagesDescription = ["20% Discount available", "20% Discount available", "20% Discount available", "20% Discount available", "20% Discount available", "20% Discount available", "10% Discount available", "20% Discount available", "10% Discount available"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,6 +17,8 @@ class EventVenuePickerViewController: UIViewController, UITableViewDataSource, U
     
     let venuePrices = ["1000", "3500", "6000", "1500", "7000", "5500","5000","1000","1000","1000","200000","200000","200000","700","700","700"]
     
+    let venueUnit = ["per person", "per person", "per person", "per person", "per person", "per person","per person","per person","per person","per person","per hall","per hall","per hall","per person","per person","per person"]
+    
     let venueCoordinates = [
                             CLLocationCoordinate2D(latitude: 24.861360, longitude: 66.848188),
                             CLLocationCoordinate2D(latitude: 25.391277, longitude: 65.460243),
@@ -70,6 +72,7 @@ class EventVenuePickerViewController: UIViewController, UITableViewDataSource, U
         cell.venueNameLabel.text! = venueNames[indexPath.row]
         cell.venueAddressLabel.text! = venueAddress[indexPath.row]
         cell.venuePriceLabel.text! = venuePrices[indexPath.row]
+        cell.venuePriceUnitLabel.text! = venueUnit[indexPath.row]
         cell.venueMapView.layer.cornerRadius = 15
         
         let backgroudView = UIView()

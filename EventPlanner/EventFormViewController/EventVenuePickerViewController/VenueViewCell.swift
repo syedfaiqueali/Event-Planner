@@ -6,6 +6,7 @@ class VenueViewCell: UITableViewCell {
     @IBOutlet weak var venueNameLabel: UILabel!
     @IBOutlet weak var venueAddressLabel: UILabel!
     @IBOutlet weak var venuePriceLabel: UILabel!
+    @IBOutlet weak var venuePriceUnitLabel: UILabel!
     @IBOutlet weak var venueMapView: UIButton!
 
     override func awakeFromNib() {
