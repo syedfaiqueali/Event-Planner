@@ -15,7 +15,7 @@ class EventVenuePickerViewController: UIViewController, UITableViewDataSource, U
     
     let venueAddress = ["Karachi City, Sindh, Pakistan", "N10, Kund Malir, Balochistan, Pakistan", "Ormara, Gwadar, Balochistan, Pakistan", "Karachi City, Sindh, Pakistan", "Dadu District, Pakistan", "Kil, Khuzdar, Balochistan, Pakistan","Ranikot fort Wall, Jamshoro, Sindh, Pakistan","Block No. 5, Boat Basin, Block 5 Clifton, Karachi","Block 15 Gulshan-e-Iqbal, Karachi, Karachi City","Block 3 Clifton, Karachi, Karachi City, Sindh","9 Abdullah Haroon Rd, Civil Lines Karachi", "Club Rd, Civil Lines Karachi", "Club Rd, Civil Lines, Karachi","Haroon Centre, Abul Hasan Isphahani Rd, Karach","Karachi Memon Co-operative Housing Society, PECHS, Karachi","Block A Sindhi Muslim CHS (SMCHS), Karachi"]
     
-    let venuePrices = ["1000", "3000", "6000", "1500", "7000", "5500","5000","1k","1k","1k","2k","2k","2k","","",""]
+    let venuePrices = ["1000", "3500", "6000", "1500", "7000", "5500","5000","1000","1000","1000","200000","200000","200000","700","700","700"]
     
     let venueCoordinates = [
                             CLLocationCoordinate2D(latitude: 24.861360, longitude: 66.848188),

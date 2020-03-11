@@ -4,10 +4,9 @@ class EventHomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
 
-    //image
-    let dataModel = [0,1,2,3,4,5,6,7,8,9]
-    //name
-    //description
+    let homeImages = [0,2,3,4,5,6,7,8,9]
+    let homeImagesNames = ["Gorakh Hills", "Ranikot", "Kund Malir", "Moola Chotak", "Movenpick", "Pearl Continental", "Hawksbay", "Coffee Waghera", "Espresso"]
+    let homeImagesDescription = ["Gorakh Hills", "Ranikot", "Kund Malir", "Moola Chotak", "Movenpick", "Pearl Continental", "Hawksbay", "Coffee Waghera", "Espresso"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +23,15 @@ class EventHomeViewController: UIViewController {
 extension EventHomeViewController: UICollectionViewDataSource, EventHomeLayoutDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataModel.count
+        return homeImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as? CustomCollectionViewCell {
             //cell.imageView.image = dataModel[indexPath.row]
-            cell.imageView.image = UIImage(named: "\(dataModel[indexPath.row]).jpg")
+            cell.imageView.image = UIImage(named: "\(homeImages[indexPath.row]).jpg")
+            cell.imageNameLabel.text = homeImagesNames[indexPath.row]
+            cell.imageDescriptionLabel.text = homeImagesDescription[indexPath.row]
             cell.clipsToBounds = true
             cell.layer.cornerRadius = 15
             cell.imageView.contentMode = .scaleAspectFill
@@ -41,7 +42,7 @@ extension EventHomeViewController: UICollectionViewDataSource, EventHomeLayoutDe
     }
     
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        let image = UIImage(named: "\(dataModel[indexPath.row]).jpg")
+        let image = UIImage(named: "\(homeImages[indexPath.row]).jpg")
         if let height = image?.size.height {
             return height
         }
