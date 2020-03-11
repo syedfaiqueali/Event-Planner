@@ -12,8 +12,11 @@ class EventFoodAndDrinksViewController: UIViewController {
     @IBOutlet weak var foodCostLabel: UILabel!
     
     
-    var foodAndDrinksName = ["Burger", "Cold drinks", "Snacks", "Tea or Coffee", "Briyani", "Pasta", "Spagetties"]
-    var foodAndDrinksPrice: [Int] = [30,40,50,60,70,80,100]
+    let foodAndDrinksName = ["Burger", "Cold drinks", "Chips", "Briyani", "Fries", "Juices", "Tea", "Coffee", "Cookies", "Pasta"]
+    let foodAndDrinksPrice: [Int] = [200,50,30,130,50,70,35,80,50,320]
+    
+    let foodAndDrinksImages = [UIImage(named: "burger")!,UIImage(named: "coke")!,UIImage(named: "chips")!,UIImage(named: "briyani")!,UIImage(named: "frenchFries")!,UIImage(named: "juices")!,UIImage(named: "tea")!,UIImage(named: "coffee")!,UIImage(named: "cookies")!,UIImage(named: "pasta")!]
+    
     var selectedFoodAndDrinksNames = [String]()
     var selectedFoodAndDrinksPrices = [Int]()
     var totalFoodAndDrinksCost = 0
@@ -40,8 +43,8 @@ class EventFoodAndDrinksViewController: UIViewController {
                 selectedFoodAndDrinksPrices.append(foodAndDrinksPrice[index.row])
             }
         }
-        print(selectedFoodAndDrinksNames)
-        print(selectedFoodAndDrinksPrices)
+        //print(selectedFoodAndDrinksNames)
+        //print(selectedFoodAndDrinksPrices)
         
         selectedItemsLabel.text = String(selectedFoodAndDrinksNames.count)
         
@@ -79,6 +82,7 @@ extension EventFoodAndDrinksViewController: UITableViewDelegate, UITableViewData
         
         cell.foodAndDrinksNameLabel.text! = foodAndDrinksName[indexPath.row]
         cell.foodAndDrinksPriceLabel.text = String(foodAndDrinksPrice[indexPath.row])
+        cell.foodAndDrinksImageView.image = foodAndDrinksImages[indexPath.row]
         return cell
     }
     

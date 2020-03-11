@@ -73,7 +73,7 @@ class EventVenuePickerViewController: UIViewController, UITableViewDataSource, U
         cell.venueMapView.layer.cornerRadius = 15
         
         let backgroudView = UIView()
-        backgroudView.backgroundColor = UIColor(red: 244/255, green: 197/255, blue: 132/255, alpha: 1)
+        backgroudView.backgroundColor = UIColor(red: 228/255, green: 254/255, blue: 255/255, alpha: 1)
         cell.selectedBackgroundView = backgroudView
         
         return cell

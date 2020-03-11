@@ -250,8 +250,8 @@ class EventFormViewController: UITableViewController, EventVenueDetailsPassing, 
     
     func updateUI() {
         //view did load configuration
-        eventVenueImageView.layer.cornerRadius = 12
-        eventTotalCalculationButton.layer.cornerRadius = 7
+        eventVenueImageView.layer.cornerRadius = 15
+        eventTotalCalculationButton.layer.cornerRadius = 10
         
         //Name, Description and Category configuration
         eventNameTextField.text = ""
